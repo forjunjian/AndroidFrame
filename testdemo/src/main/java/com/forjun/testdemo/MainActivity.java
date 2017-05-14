@@ -1,6 +1,6 @@
 package com.forjun.testdemo;
 
-import com.forjun.frame.frame.testframe.BaseKKTestActivity;
+import com.forjun.frame.frame.base.ui.activity.BaseKKTestActivity;
 
 public class MainActivity extends BaseKKTestActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.forjun.frame.frame.testframe;
+package com.forjun.frame.frame.base.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

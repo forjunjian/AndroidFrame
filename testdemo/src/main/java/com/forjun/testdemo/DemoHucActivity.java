@@ -1,6 +1,6 @@
 package com.forjun.testdemo;
 
-import com.forjun.frame.frame.testframe.BaseActivity;
+import com.forjun.frame.frame.base.ui.activity.BaseActivity;
 
 /**
  * Created by 黄骏健 on 2017/5/14.

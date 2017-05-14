@@ -1,4 +1,4 @@
-package com.forjun.frame.frame.testframe;
+package com.forjun.frame.frame.base.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;

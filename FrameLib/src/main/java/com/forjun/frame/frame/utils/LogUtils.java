@@ -1,4 +1,4 @@
-package com.forjun.frame.frame.base.utils;
+package com.forjun.frame.frame.utils;
 
 import android.util.Log;
 
