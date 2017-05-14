@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/item_test_base_container"
+              android:background="@drawable/actionbar_green_btn_selector"
+              android:layout_margin="8dp"
+              android:orientation="vertical">
+
+    <TextView
+
+        android:id="@+id/item_test_base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="demo busLineName"
+        android:textColor="#0b7c72"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/item_test_base_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:textColor="#660f8ca5"
+        android:text="demo desc"
+        android:textSize="14sp"/>
+
+</LinearLayout>
