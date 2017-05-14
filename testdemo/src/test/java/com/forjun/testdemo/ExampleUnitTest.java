@@ -1,4 +1,4 @@
-package com.forjun.frame;
+package com.forjun.testdemo;
 
 import org.junit.Test;
 
