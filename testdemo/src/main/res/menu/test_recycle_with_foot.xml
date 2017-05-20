@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="删除最后一行"
+          android:id="@+id/foot_recycle_remove"/>
+    <item android:title="添加最后一行"
+          android:id="@+id/foot_recyle_add"/>
+</menu>

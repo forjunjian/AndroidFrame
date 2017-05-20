@@ -10,4 +10,5 @@ public class MainActivity extends BaseKKTestActivity {
                 new DemoInfo("title","decs", DemoHucActivity.class)
         };
     }
+
 }
