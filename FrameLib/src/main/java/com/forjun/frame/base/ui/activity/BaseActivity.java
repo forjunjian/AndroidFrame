@@ -83,22 +83,22 @@ public abstract class BaseActivity extends AppCompatActivity implements ToastInt
 	}
 
 	@Override
-	public void showAleartDialog(String msg) {
+	public void showAlertDialog(String msg) {
 
 	}
 
 	@Override
-	public void showAleartDialog(String title, String contentMsg) {
+	public void showAlertDialog(String title, String contentMsg) {
 
 	}
 
 	@Override
-	public void showAleartDialog(String title, String contentMsg, AleartDialogListener listener) {
+	public void showAlertDialog(String title, String contentMsg, AleartDialogListener listener) {
 
 	}
 
 	@Override
-	public void showAleartDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener) {
+	public void showAlertDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener) {
 
 	}
 

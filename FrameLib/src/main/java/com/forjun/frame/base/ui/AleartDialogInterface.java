@@ -6,13 +6,13 @@ package com.forjun.frame.base.ui;
 
 public interface AleartDialogInterface extends DialogInterface {
 
-	void showAleartDialog(String msg);
+	void showAlertDialog(String msg);
 
-	void showAleartDialog(String title, String contentMsg);
+	void showAlertDialog(String title, String contentMsg);
 
-	void showAleartDialog(String title, String contentMsg, AleartDialogListener listener);
+	void showAlertDialog(String title, String contentMsg, AleartDialogListener listener);
 
-	void showAleartDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener);
+	void showAlertDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener);
 
 	interface AleartDialogListener {
 
