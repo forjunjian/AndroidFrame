@@ -42,4 +42,8 @@ public class ShowKKTestActivity extends BaseKKTestActivity {
 		return true;
 	}
 
+	@Override
+	protected DemoInfo[] getDemos() {
+		return new DemoInfo[0];
+	}
 }
