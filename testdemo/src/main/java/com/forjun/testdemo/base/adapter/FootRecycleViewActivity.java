@@ -5,8 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.forjun.frame.frame.base.adapter.FootRecycleAdapter;
-import com.forjun.frame.frame.base.ui.activity.BaseActivity;
+import com.forjun.frame.base.adapter.FootRecycleAdapter;
+import com.forjun.frame.base.ui.activity.BaseActivity;
 import com.forjun.testdemo.R;
 
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class FootRecycleViewActivity extends BaseActivity {
         initView();
     }
 
-    private void initView() {
+    protected void initView() {
         mRclview = (RecyclerView) findViewById(R.id.rclview);
         mRclview.setHasFixedSize(true);
         mRclview.setLayoutManager(new LinearLayoutManager(this));
@@ -68,7 +68,6 @@ public class FootRecycleViewActivity extends BaseActivity {
                 break;
         }
         return true;
-
     }
 
     /**

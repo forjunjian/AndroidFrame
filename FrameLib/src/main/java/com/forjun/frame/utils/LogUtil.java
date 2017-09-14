@@ -1,13 +1,15 @@
-package com.forjun.frame.frame.utils;
+package com.forjun.frame.utils;
 
 import android.util.Log;
 
 /**
  * 吐司工具类
  */
-public class LogUtils {
-    private static final boolean flag = true;
-    private static LogUtils instance;
+public class LogUtil {
+
+    private static final boolean flag      = true;
+    public static final  boolean lifeCycle = true;
+    private static LogUtil instance;
 
     public static void d(String TAG, String msg) {
         if(flag){

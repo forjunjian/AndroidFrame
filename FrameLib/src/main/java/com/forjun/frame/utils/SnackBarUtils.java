@@ -1,4 +1,4 @@
-package com.forjun.frame.frame.utils;
+package com.forjun.frame.utils;
 
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;

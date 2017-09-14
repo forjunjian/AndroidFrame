@@ -1,4 +1,4 @@
-package com.forjun.frame.frame.base.ui.activity;
+package com.forjun.frame.base.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,8 +17,9 @@ import com.forjun.frame.R;
  * <p>主要是RecycleView的一个列表，当点击条目后会跳转到一个新的Activity。包含Title和描述</p>
  * <p>需要子类实现 {@link #getDemos()}</p>
  */
-public abstract class BaseKKTestActivity extends BaseActivity {
-    private static final String TAG = BaseKKTestActivity.class.getSimpleName();
+public abstract class BaseKKJumpActivity extends BaseActivity {
+
+    private static final String TAG = BaseKKJumpActivity.class.getSimpleName();
     private DemoInfo[] mDEMOS;
 
     RecyclerView mClvHome;
@@ -28,15 +29,14 @@ public abstract class BaseKKTestActivity extends BaseActivity {
         return R.layout.activity_base_test;
     }
 
+
     @Override
-    protected void init() {
-        super.init();
+    protected void initView() {
         mClvHome = (RecyclerView) findViewById(R.id.clv_base_test);
         mDEMOS = getDemos();
         mClvHome.setHasFixedSize(true);
         mClvHome.setLayoutManager(new LinearLayoutManager(mContext));
         mClvHome.setAdapter(new DemoListAdapter());
-
     }
 
     protected abstract DemoInfo[] getDemos();
