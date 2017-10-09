@@ -2,7 +2,7 @@ package com.forjun.frame.utils;
 
 import android.widget.Toast;
 
-import com.forjun.frame.app.BaseApplication;
+import com.forjun.frame.base.BaseApplication;
 
 /**
  * Created by 黄骏健 on 2017/7/28.

@@ -1,4 +1,4 @@
-package com.forjun.frame.app;
+package com.forjun.frame.base;
 
 import android.app.Application;
 import android.content.Context;

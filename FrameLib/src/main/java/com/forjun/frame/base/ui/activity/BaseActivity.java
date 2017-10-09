@@ -17,112 +17,110 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity implements ToastInterface, WaitingDialogInterface, AleartDialogInterface {
 
-	private static String            TAG;
-	protected      AppCompatActivity mContext;
+    private String TAG = this.getClass().getSimpleName();
+    protected AppCompatActivity mContext;
 
 
-	@Override
-	protected void onCreate(@Nullable Bundle savedInstanceState) {
-		super.onCreate( savedInstanceState );
-		mContext = this;
-		TAG = this.getClass().getSimpleName();
-		setContentView( getResourcesId() );
-		ButterKnife.bind( this );
-		init();
-	}
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mContext = this;
+        setContentView(getResourcesId());
+        ButterKnife.bind(this);
+        init();
+    }
 
-	/**
-	 * 获取layoutId
-	 *
-	 * @return
-	 */
-	protected abstract int getResourcesId();
+    /**
+     * 获取layoutId
+     *
+     * @return
+     */
+    protected abstract int getResourcesId();
 
-	/**
-	 * 初始化
-	 */
-	protected void init() {
-		initView();
-		initData();
-		initListener();
-	}
+    /**
+     * 初始化
+     */
+    protected void init() {
+        initView();
+        initData();
+        initListener();
+    }
 
-	protected abstract void initView();
+    protected abstract void initView();
 
-	protected void initData() {
+    protected void initData() {
 
-	}
+    }
 
-	protected void initListener() {
+    protected void initListener() {
 
-	}
+    }
 
 
-	@Override
-	public void showToast(String msg) {
-		ToastUtil.show( msg );
-	}
+    @Override
+    public void showToast(String msg) {
+        ToastUtil.show(msg);
+    }
 
-	public void showToast(int msg) {
-		ToastUtil.show( msg );
-	}
+    public void showToast(int msg) {
+        ToastUtil.show(msg);
+    }
 
-	@Override
-	public void showToastL(String msg) {
-		ToastUtil.showL( msg );
-	}
+    @Override
+    public void showToastL(String msg) {
+        ToastUtil.showL(msg);
+    }
 
-	@Override
-	public void showToastL(int msg) {
-		ToastUtil.showL( msg );
-	}
+    @Override
+    public void showToastL(int msg) {
+        ToastUtil.showL(msg);
+    }
 
-	@Override
-	public void dismissToast() {
-		ToastUtil.cancel();
-	}
+    @Override
+    public void dismissToast() {
+        ToastUtil.cancel();
+    }
 
-	@Override
-	public void showAlertDialog(String msg) {
+    @Override
+    public void showAlertDialog(String msg) {
 
-	}
+    }
 
-	@Override
-	public void showAlertDialog(String title, String contentMsg) {
+    @Override
+    public void showAlertDialog(String title, String contentMsg) {
+    }
 
-	}
+    @Override
+    public void showAlertDialog(String title, String contentMsg, AleartDialogListener listener) {
 
-	@Override
-	public void showAlertDialog(String title, String contentMsg, AleartDialogListener listener) {
+    }
 
-	}
+    @Override
+    public void showAlertDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener) {
 
-	@Override
-	public void showAlertDialog(String title, String contentMsg, boolean isCancleAble, AleartDialogListener listener) {
+    }
 
-	}
+    private WaitingDialog mWaitingDialog;
 
-	private WaitingDialog mWaitingDialog;
+    public void showWaitingDialog() {
+        mWaitingDialog = new WaitingDialog(this);
+        mWaitingDialog.show();
+    }
 
-	public void showWaitingDialog() {
-		mWaitingDialog = new WaitingDialog( this );
-		mWaitingDialog.show();
-	}
+    @Override
+    public void showWaitingDialog(String msg) {
+        mWaitingDialog = new WaitingDialog(this, msg);
+        mWaitingDialog.show();
+    }
 
-	@Override
-	public void showWaitingDialog(String msg) {
-		mWaitingDialog = new WaitingDialog( this, msg );
-		mWaitingDialog.show();
-	}
+    @Override
+    public void showWaitingDialog(String title, String subHead) {
+        mWaitingDialog = new WaitingDialog(this, title, subHead);
+        mWaitingDialog.show();
+    }
 
-	@Override
-	public void showWaitingDialog(String title, String subHead) {
-		mWaitingDialog = new WaitingDialog( this, title, subHead );
-		mWaitingDialog.show();
-	}
-
-	@Override
-	public void dismissDialog() {
-		mWaitingDialog.dismiss();
-	}
+    @Override
+    public void dismissDialog() {
+        mWaitingDialog.dismiss();
+    }
 }

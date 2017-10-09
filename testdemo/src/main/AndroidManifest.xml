@@ -3,11 +3,11 @@
           package="com.forjun.testdemo">
 
     <application
+        android:name=".app.TestDemoAppclication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".app.TestDemoAppclication"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,6 +23,8 @@
         </activity>
         <activity android:name=".base.ui.activity.ShowKKTestActivity"/>
         <!--<activity android:name=".base.adapter.ui.activity."/>-->
+        <!--uitls 包目录下-->
+        <activity android:name=".utils.ScreenUtilsActivity"/>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import com.forjun.frame.R;
  * 快速测试的框架
  * <p>主要是RecycleView的一个列表，当点击条目后会跳转到一个新的Activity。包含Title和描述</p>
  * <p>需要子类实现 {@link #getDemos()}</p>
- *
+ * <p>
  * <p>跳转例子 <pre>{@code
  * protected DemoInfo[] getDemos() {
  *  Binder binder = new Binder();
@@ -56,7 +57,7 @@ public abstract class BaseKKTestActivity extends BaseActivity {
 
     protected abstract DemoInfo[] getDemos();
 
-    private  class DemoListAdapter extends RecyclerView.Adapter<ContainViewHolder>{
+    private class DemoListAdapter extends RecyclerView.Adapter<ContainViewHolder> {
 
         @Override
         public ContainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -88,15 +89,27 @@ public abstract class BaseKKTestActivity extends BaseActivity {
             mDesc = (TextView) itemView.findViewById(R.id.item_test_base_desc);
         }
 
-        public void bindView(final DemoInfo info){
-            mTitle.setText(info.title);
-            mDesc.setText(info.desc);
+        public void bindView(final DemoInfo info) {
+            if (TextUtils.isEmpty(info.title)) {
+                mTitle.setVisibility(View.GONE);
+            } else {
+                mTitle.setVisibility(View.VISIBLE);
+                mTitle.setText(info.title);
+            }
+
+            if (TextUtils.isEmpty(info.desc)) {
+                mDesc.setVisibility(View.GONE);
+            } else {
+                mDesc.setVisibility(View.VISIBLE);
+                mDesc.setText(info.desc);
+            }
+
             rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if ( info.demoClass != null ) {
-                        Intent intent = new Intent( mContext, info.demoClass );
-                        mContext.startActivity( intent );
+                    if (info.demoClass != null) {
+                        Intent intent = new Intent(mContext, info.demoClass);
+                        mContext.startActivity(intent);
                     }
                     info.onItemClick();
                 }
@@ -105,17 +118,21 @@ public abstract class BaseKKTestActivity extends BaseActivity {
     }
 
 
-
-
     /**
      * item的信息结构
      */
     public static class DemoInfo {
-        /** 点击Item跳转的View*/
+        /**
+         * 点击Item跳转的View
+         */
         final Class<? extends Activity> demoClass;
-        /** 条目的标题 */
+        /**
+         * 条目的标题
+         */
         final String title;
-        /** 描述 */
+        /**
+         * 描述
+         */
         final String desc;
 
         /**
@@ -125,7 +142,7 @@ public abstract class BaseKKTestActivity extends BaseActivity {
         }
 
         public DemoInfo(String title, String desc) {
-            this( title, desc,null);
+            this(title, desc, null);
         }
 
         public DemoInfo(String title, String desc,
