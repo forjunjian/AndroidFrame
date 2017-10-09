@@ -1,6 +1,5 @@
 package com.forjun.testdemo;
 
-import android.content.pm.ApplicationInfo;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

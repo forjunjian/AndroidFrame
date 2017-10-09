@@ -2,6 +2,7 @@ package com.forjun.testdemo.utils;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -23,6 +24,11 @@ public class SeekBarDialog extends AlertDialog {
 
     protected SeekBarDialog(Context context) {
         super(context);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_seek_bar);
         tv_dialog_seek_bar = (TextView) findViewById(R.id.tv_dialog_seek_bar);
         sb_dialog_seek_bar = (SeekBar) findViewById(R.id.sb_dialog_seek_bar);
@@ -63,7 +69,6 @@ public class SeekBarDialog extends AlertDialog {
                 dismiss();
             }
         });
-
     }
 
     private OnSeekDialogListener mListener;
