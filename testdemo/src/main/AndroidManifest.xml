@@ -9,22 +9,45 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".AllLevelActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DemoHucActivity">
 
-        </activity>
-        <activity android:name=".base.adapter.FootRecycleViewActivity">
-        </activity>
-        <activity android:name=".base.ui.activity.ShowKKTestActivity"/>
-        <!--<activity android:name=".base.adapter.ui.activity."/>-->
+        <!--adapter包目录下-->
+        <activity android:name=".base.adapter.ShowFootRecycleViewActivity"/>
+
+        <!--base.ui包目录下-->
+        <activity
+            android:name=".base.ui.BaseUiLevelActivity"
+            android:label="Base.Ui 包"/>
+        <activity
+            android:name=".base.ui.activity.BaseUiActivityLevelActivity"
+            android:label="Base.ui.activity 包"/>
+        <activity
+            android:name=".base.ui.activity.ShowBaseActivity"
+            android:label="测试基础activity"/>
+        <activity
+            android:name=".base.ui.activity.ShowKKTestActivity"
+            android:label="快速测试例子，点击右侧"/>
+        <activity
+            android:name=".base.ui.activity.ShowRefreshActivity"
+            android:label="ShowBaseRefreshActivity"/>
+        <activity
+            android:name=".base.ui.activity.ShowPullToRefreshActivity"
+            android:label="ShowBasePullToRefreshActivity"/>
+
+
         <!--uitls 包目录下-->
-        <activity android:name=".utils.ScreenUtilsActivity"/>
+        <activity
+            android:name=".utils.UtilsLevelActivity"
+            android:label="utils 包"/>
+        <activity
+            android:name=".utils.ShowScreenUtilsActivity"
+            android:label="屏幕utils 相关"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.forjun.testdemo;
+package com.forjun.testdemo.base.ui.activity;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,11 +9,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.forjun.frame.base.ui.activity.BaseActivity;
+import com.forjun.testdemo.R;
 
 /**
  * Created by 黄骏健 on 2017/5/14.
  */
-public class DemoHucActivity extends BaseActivity {
+public class ShowBaseActivity extends BaseActivity {
 
 	private ListView             lv_container;
 	private BaseAdapter          mLocalAdapter;

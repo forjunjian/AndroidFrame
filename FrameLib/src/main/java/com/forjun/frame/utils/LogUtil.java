@@ -8,12 +8,12 @@ import android.util.Log;
 public class LogUtil {
 
     private static final boolean flag      = true;
-    public static final  boolean lifeCycle = true;
+    public static final boolean lifeCycle = false;
     private static LogUtil instance;
 
     public static void d(String TAG, String msg) {
         if(flag){
-            Log.i(TAG, msg);
+            Log.d(TAG, msg);
         }
     }
 
@@ -25,7 +25,7 @@ public class LogUtil {
 
     public static void e(String TAG, String msg) {
         if(flag){
-            Log.i(TAG, msg);
+            Log.e(TAG, msg);
         }
     }
 

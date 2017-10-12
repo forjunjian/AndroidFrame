@@ -16,7 +16,7 @@ import java.util.List;
  * Created by 黄骏健 on 2017/5/20.
  */
 
-public class FootRecycleViewActivity extends BaseActivity {
+public class ShowFootRecycleViewActivity extends BaseActivity {
 
     private RecyclerView mRclview;
     private FootRecycleAdapter mAdapter;

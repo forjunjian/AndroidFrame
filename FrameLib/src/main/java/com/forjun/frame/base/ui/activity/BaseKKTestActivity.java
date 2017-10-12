@@ -35,7 +35,7 @@ import com.forjun.frame.R;
  */
 public abstract class BaseKKTestActivity extends BaseActivity {
 
-    private static final String TAG = BaseKKTestActivity.class.getSimpleName();
+    protected final String TAG = this.getClass().getSimpleName();
     private DemoInfo[] mDEMOS;
 
     RecyclerView mClvHome;
