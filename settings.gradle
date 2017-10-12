@@ -1,1 +1,1 @@
-include ':FrameLib', ':testdemo'
+include ':FrameLib', ':FrameTest'
