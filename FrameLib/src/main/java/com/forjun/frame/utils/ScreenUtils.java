@@ -65,12 +65,6 @@ public class ScreenUtils {
      * <p>{@link #setSystemBrightness(AppCompatActivity, int)}为修改系统亮度</p>
      */
     public static void setWindowBrightness(AppCompatActivity activity, float brightness) {
-        // 如果开启自动亮度调节，则会失效
-        if (isAutoBrightness(activity.getContentResolver())) {
-            //关闭自动亮度调节
-            stopAutoBrightness(activity);
-        }
-
         WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
         lp.screenBrightness = brightness;
 
